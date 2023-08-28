@@ -4,3 +4,4 @@
 #chmod 544 testShell00
 #truncate -s 0 testShell00
 #touch -m -t YYYYMMDDHHMM.SS testShell00
+#tar -cf testShell00.tar testShell00
