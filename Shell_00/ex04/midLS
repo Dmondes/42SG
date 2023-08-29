@@ -1,1 +1,12 @@
 ls -pmt
+
+
+
+# ls: list files and directories.
+
+#-p: Adds a "/" at the end of folder names
+
+#-m: Puts a comma between the file names of things in the list 
+
+#-t: Sorts the list of files and directories based on their modification time, with the most recently modified files appearing first
+
