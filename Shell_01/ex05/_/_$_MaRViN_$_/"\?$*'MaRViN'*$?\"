@@ -1,1 +1,5 @@
 42
+
+
+#single quote: anything between is treated as literal string
+Backslash character is used as an escape character
