@@ -11,3 +11,5 @@ void	ft_print_numbers(void)
 		a++;
 	}
 }
+
+// Digits are also represented by numbers in the ASCII table.
