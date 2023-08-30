@@ -11,3 +11,5 @@ void	ft_print_reverse_alphabet(void)
 		letter--;
 	}
 }
+
+//Each letter is numerically represented in the ASCII table, the numeric decremented is equivalent to the alphabetic order.
