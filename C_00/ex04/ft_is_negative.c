@@ -11,3 +11,6 @@ void	ft_is_negative(int n)
 		write(1, "P", 1);
 	}
 }
+
+//If n is less than 0, character N will be printed.
+//Else for n is null or n is positive, character P will be printed.
