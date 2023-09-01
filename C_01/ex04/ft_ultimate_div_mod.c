@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 09:14:08 by delim             #+#    #+#             */
-/*   Updated: 2023/06/26 09:24:06 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	div;
@@ -20,3 +8,7 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	*a = div;
 	*b = mod;
 }
+// div as a placeholder to store quotient
+//mod as a placeholder to store remainder
+// assign div to *a
+//assign mod to *b
