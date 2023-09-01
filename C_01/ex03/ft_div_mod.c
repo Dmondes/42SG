@@ -1,17 +1,9 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 08:51:06 by delim             #+#    #+#             */
-/*   Updated: 2023/06/26 08:56:58 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = a / b;
 	*mod = a % b;
 }
+
+// div / gets the quotient
+// mod % gets the remainder
+// improvement can be made to check if b!= 0
