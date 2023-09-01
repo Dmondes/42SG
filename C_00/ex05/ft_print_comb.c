@@ -35,3 +35,9 @@ void	ft_print_comb(void)
 		}
 	}
 }
+
+//ft_put_char: to print each possible combn
+//Largest possible number for the 1st digit a is 7
+//The increment is always applied to the last digit first, 
+//If last digit is greater than 9, the 2nd digit will be incremented, and the last digit = 2nd digit + 1
+//If 2nd digit is greater than 8, the 1st digit will be incremented, 2nd digit = 1st digit + 1 and 3rd digit = 2nd digit + 1
