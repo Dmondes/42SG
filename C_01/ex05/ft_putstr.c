@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 09:29:58 by delim             #+#    #+#             */
-/*   Updated: 2023/06/27 08:25:20 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putstr(char *str)
@@ -20,4 +8,5 @@ void	ft_putstr(char *str)
 		str++;
 	}
 }
-//while (*str != '\0')
+//while (*str != '\0') is the same as while (*str)
+// null-terminating character '\0' is evaluated as false in while conditional
