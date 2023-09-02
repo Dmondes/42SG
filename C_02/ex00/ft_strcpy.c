@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 09:43:05 by delim             #+#    #+#             */
-/*   Updated: 2023/07/02 12:19:57 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -23,3 +11,7 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+
+//  strcpy: copies characters from the source string to the destination till a null terminator '\0' in source is encountered
+// while src is != '/0', iterate through src, and each character is copied to dest, [i]: as indexed position 
+// dest = '\0' added at the end as '\0' is not copied from src
