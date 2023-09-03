@@ -14,4 +14,5 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
-/* char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";*/
+// char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; alternate soln
+//check str[i] for uppercase or lowercase, returns 0 if not, else returns 1
