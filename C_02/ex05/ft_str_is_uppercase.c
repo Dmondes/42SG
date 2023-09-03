@@ -11,3 +11,4 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (1);
 }
+//  checks if current str[i] is a character that is not in the range of ASCII values 'A' and 'Z'
