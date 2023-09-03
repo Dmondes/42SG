@@ -10,3 +10,4 @@ int	ft_str_is_printable(char *str)
 	}
 	return (1);
 }
+// printed: characters that can be displayed which are in the ascii range between ' ' and '~'
