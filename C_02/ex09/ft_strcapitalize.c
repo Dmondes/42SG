@@ -41,3 +41,6 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
+//converts everything to lowercase first
+//first if-conditional checks for alphanumeric
+//cap = 1 means the next letter will be capitalized
