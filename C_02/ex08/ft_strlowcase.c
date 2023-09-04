@@ -13,3 +13,4 @@ char	*ft_strlowcase(char *str)
 	}
 	return (str);
 }
+//The difference between 'a'(97) and 'A'(65) on the ASCII chart is 32
