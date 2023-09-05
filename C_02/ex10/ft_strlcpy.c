@@ -14,3 +14,5 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[i] = '\0';
 	return (i);
 }
+//strlcpy: always null-terminates dest, returns the length of the source string
+//if i < (size -1), copy the src to dest
