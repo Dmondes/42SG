@@ -16,3 +16,4 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (NULL);
 }
+// strstr: find first occurence of substring (*to_find) in string str)
