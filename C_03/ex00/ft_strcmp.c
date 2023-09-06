@@ -18,3 +18,8 @@ int	ft_strcmp(char *s1, char *s2)
 	else
 		return (0);
 }
+// strcmp: compare 2 strings
+//If f s1 is lexicographically less than s2, it returns -1.
+//If s1 is lexicographically greater than s2, it returns 1.
+//If s1 is shorter than s2, returns -1. If s1 is longer than s2, returns 1.
+//If s1 and s2 are equal, it returns 0.
