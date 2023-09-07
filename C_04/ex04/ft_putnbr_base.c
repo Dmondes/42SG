@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 08:42:55 by delim             #+#    #+#             */
-/*   Updated: 2023/07/09 09:33:48 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -27,15 +15,15 @@ int	checkchar(char *str)
 	while (str[i])
 	{
 		j = i;
-		compare = str[i];
+		compare = str[i]; //iterate through and compare char to char to find duplicates
 		while (str[j++])
 		{
 			if (compare == str[j])
-				return (0);
+				return (0); // there is a duplicate, base does not contain unique characters
 		}
 		i ++;
 	}
-	return (i);
+	return (i); // else return the entire string, all characters are unique
 }
 
 int	checkerror(char *base)
@@ -47,13 +35,13 @@ int	checkerror(char *base)
 	chekcha = checkchar(base);
 	while (base[i])
 	{
-		if (base[i] == '+' || base[i] == '-')
+		if (base[i] == '+' || base[i] == '-') // if these signs are encountered, then base is invalid
 			return (0);
-		if (chekcha == 0)
+		if (chekcha == 0) // duplicate chars, invalid base
 			return (0);
 		i ++;
 	}
-	if (i < 2)
+	if (i < 2) //base cannot be less than 2
 		return (0);
 	return (i);
 }
@@ -64,20 +52,21 @@ void	ft_putnbr_base(int nbr, char *base)
 	long	len;
 
 	n = nbr;
-	len = checkerror(base);
+	len = checkerror(base); //check if base is valid
 	if (n < 0)
 	{
-		ft_putchar('-');
-		n = -n;
+		ft_putchar('-'); // print the - sign
+		n = -n; // converts num to +ve
 	}
-	if (len != 0)
+	if (len != 0) // check len of base is not 0
 	{
 		if (n < len)
-			ft_putchar(base[(n % len)]);
+			ft_putchar(base[(n % len)]); // get remainder, n is within base
 		else
 		{
-			ft_putnbr_base((n / len), base);
-			ft_putnbr_base((n % len), base);
+			ft_putnbr_base((n / len), base); // recursion to get base case
+			ft_putnbr_base((n % len), base); // print the remainder
 		}
 	}
 }		
+//converts int to a string representation dependent on the base
