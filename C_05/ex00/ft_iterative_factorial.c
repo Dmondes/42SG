@@ -1,25 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 08:24:37 by delim             #+#    #+#             */
-/*   Updated: 2023/07/07 08:36:17 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 int	ft_iterative_factorial(int nb)
 {
 	int	result;
 
 	result = 1;
-	if (nb == 0 || nb == 1)
-		return (result);
-	while (nb)
+	if (nb == 0 || nb == 1) 
+		return (result); // factorial of 0 and 1 is 1
+	while (nb) // while nb is not 0
 	{
-		result = result * nb;
+		result = result * nb; // Keep multiplying with the next biggestt number
 		nb --;
 	}
 	if (result != 1)
