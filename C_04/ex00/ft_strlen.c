@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/29 11:27:09 by delim             #+#    #+#             */
-/*   Updated: 2023/06/29 11:30:54 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -17,7 +5,8 @@ int	ft_strlen(char *str)
 	i = 0;
 	while (str[i])
 	{
-		i ++;
+		i ++; // counter increases as the loop iterate through the string
 	}
-	return (i);
+	return (i); // return final count
 }
+
