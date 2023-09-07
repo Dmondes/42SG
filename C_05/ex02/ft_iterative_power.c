@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 09:01:07 by delim             #+#    #+#             */
-/*   Updated: 2023/07/07 09:10:30 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 int	ft_iterative_power(int nb, int power)
 {
 	int	result;
@@ -18,14 +6,14 @@ int	ft_iterative_power(int nb, int power)
 	result = nb;
 	i = 1;
 	if (power == 0)
-		return (1);
+		return (1); // anything raised to the power of 0 is 1
 	if (power < 0)
-		return (0);
+		return (0); // undefined hence return 0
 	if (power == 1)
-		return (nb);
+		return (nb); // anything raised to the power of 1 is itself
 	else
 	{
-		while (i < power)
+		while (i < power) // mulitple till i = power
 		{
 			result *= nb;
 			i ++;
