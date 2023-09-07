@@ -1,50 +1,39 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 07:22:55 by delim             #+#    #+#             */
-/*   Updated: 2023/07/07 07:52:02 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 char	*checkspace(char *str)
 {
 	int	i;
 
 	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i ++;
-	return (&(str[i]));
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32) // check for whitespace characters
+		i ++; // iterate through and skip
+	return (&(str[i])); // return pointer to the first non-whitespace character
 }
 
 int	ft_atoi(char *str)
 {
-	int	i;
-	int	negative;
-	int	num;
+	int	i; // for iteration
+	int	negative; // check for negative num
+	int	num; // store int value
 
 	i = 0;
 	negative = 0;
 	num = 0;
-	str = checkspace(str);
-	while (str[i] == '+' || str[i] == '-')
+	str = checkspace(str); // skip leading whitespaces
+	while (str[i] == '+' || str[i] == '-')// skip +/- signs
 	{
 		if (str [i] == '-')
-			negative ++;
+			negative ++; // track no of - signs
 		i ++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		num = (num * 10) + (str[i] - '0');
+		num = (num * 10) + (str[i] - '0'); // coverts to int
 		i ++;
 	}
-	if (negative % 2 == 1)
+	if (negative % 2 == 1) // check if num is -ve base on odd/even no of  - signs
 		num = -num;
 	if (num)
 		return (num);
 	else
 		return (0);
 }
+// str can start with whitespaces, followed by any amount of +/- signs, followed by any num base 10
