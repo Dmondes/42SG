@@ -1,22 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/29 11:36:22 by delim             #+#    #+#             */
-/*   Updated: 2023/06/29 11:54:40 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putstr(char *str)
 {
 	while (*str)
 	{
-		write(1, str, 1);
-		str ++;
+		write(1, str, 1); // print the char pointed by the pointer
+		str ++; // pointer incremented
 	}
 }
