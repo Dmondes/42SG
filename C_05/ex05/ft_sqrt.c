@@ -1,27 +1,15 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 09:55:28 by delim             #+#    #+#             */
-/*   Updated: 2023/07/09 11:42:05 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 int	ft_sqrt(int nb)
 {
 	int		i;
 
 	i = 0;
-	if (nb < 0)
+	if (nb < 0) // handle -ve values, no real sqrt 
 		return (0);
-	while (nb >= (i * i) && (i < 46341))
+	while (nb >= (i * i) && (i < 46341)) // prevent int overflow
 	{
 		if (nb == (i * i))
-			return (i);
+			return (i); // sqrt found
 		i ++;
 	}
-	return (0);
+	return (0); // no sqrt
 }
