@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 12:15:32 by delim             #+#    #+#             */
-/*   Updated: 2023/07/09 13:01:40 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-int	ft_is_prime(int nb)
+int	ft_is_prime(int nb) // check for prime number
 {
 	long	i;
 	long	n;
@@ -34,12 +22,12 @@ int	ft_find_next_prime(int nb)
 	i = 0;
 	n = nb;
 	if (n <= 2)
-		return (2);
+		return (2); // deduce 2 is the next prime number
 	while (n)
 	{
-		if (ft_is_prime(n + i) == 1)
-			return (n + i);
+		if (ft_is_prime(n + i) == 1) // increment and check if it is prime number
+			return (n + i); // found prime number
 		i ++;
 	}
-	return (0);
+	return (0); // no prime number found
 }
