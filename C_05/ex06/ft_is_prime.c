@@ -1,29 +1,17 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 10:39:43 by delim             #+#    #+#             */
-/*   Updated: 2023/07/09 11:47:32 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 int	ft_is_prime(int nb)
 {
 	long	i;
-	long	n;
+	long	n; // use long to prevent int overflow
 
 	i = 2;
 	n = nb;
-	if (n <= 1)
+	if (n <= 1) // 1 is not prime num
 		return (0);
 	while (n >= (i * i))
 	{
-		if (n % i == 0)
-			return (0);
+		if (n % i == 0) // check if nb is divisible by other num
+			return (0); // nb is a composite number
 		i ++;
 	}
-	return (1);
+	return (1); // nb is prime number
 }
