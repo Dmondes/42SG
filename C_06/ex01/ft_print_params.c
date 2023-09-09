@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 10:26:36 by delim             #+#    #+#             */
-/*   Updated: 2023/07/07 10:37:41 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -24,18 +12,18 @@ int	main(int argc, char **argv)
 
 	i = 1;
 	j = 0;
-	if (argc > 1)
+	if (argc > 1) // check if there are other arguments apart from program name
 	{
 		while (argv[i])
 		{
 			while (argv[i][j])
 			{
-				ft_putchar(argv[i][j]);
+				ft_putchar(argv[i][j]); // iterate through each character of the 2nd argument
 				j ++;
 			}
 			ft_putchar('\n');
-			j = 0;
-			i ++;
+			j = 0; // reset
+			i ++; // start with the next argument
 		}
 	}
 }
