@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 10:05:26 by delim             #+#    #+#             */
-/*   Updated: 2023/07/07 10:25:28 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -22,14 +10,14 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 0;
-	if (argc == 1)
+	if (argc == 1) // only argument is the program name
 	{
 		while (argv[0][i])
 		{
-			ft_putchar(argv[0][i]);
+			ft_putchar(argv[0][i]); // iterate through the program name
 			i ++;
 		}
-		ft_putchar('\n');
+		ft_putchar('\n'); // print newline
 		return (0);
 	}
 }
