@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 10:38:49 by delim             #+#    #+#             */
-/*   Updated: 2023/07/09 17:14:25 by delim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -25,19 +13,19 @@ int	main(int argc, char **argv)
 
 	i = 1;
 	j = 0;
-	counter = argc;
-	if (argc > 1)
+	counter = argc; // total number of arguments
+	if (argc > 1) // print command line in reverse
 	{
 		while (i < counter)
 		{
-			while (argv[counter - 1][j])
+			while (argv[counter - 1][j]) // index starts from 0
 			{
 				ft_putchar(argv[counter - 1][j]);
 				j ++;
 			}
 			ft_putchar('\n');
-			j = 0;
-			counter --;
+			j = 0; // reset
+			counter --; // next argument
 		}
 	}
 }
